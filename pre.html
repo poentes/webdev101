@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Utilizando a TAG pre</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./preEstilos.css">
+</head>
+<body>
+
+	Exemplo de código em C:
+
+	<pre>
+		#include &lt;stdio.h&gt;	
+		#include &lt;stdlib.h&gt;	
+		#include &lt;time.&gt;	
+
+		#define <span class="roxo">MAX</span> 20
+
+		void bubbleSort(<span class="vermelho">int </span>*);
+		void printArray(<span class="vermelho">int </span>*);
+
+		<span class="vermelho">int </span>main()
+		{
+			srand(time(<span class="roxo">NULL</span>));
+			<span class="vermelho">int </span>i;
+			<span class="vermelho">int </span>*vetor;
+			vetor = malloc( <span class="roxo">MAX</span> * sizeof(int));
+
+			for(i = 0; i < <span class="roxo">MAX</span>; i++)
+				vetor[i] = rand() % (<span class="roxo">MAX</span> + 1);
+
+			printArray(vetor);
+
+			free(vetor);
+			return(0);
+		}
+	</pre>
+
+</body>
+</html>;
