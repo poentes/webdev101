@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms in HTML5</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<form method="POST">
+		Nome:<br>
+		<input type="text" name="nome">	
+		<br>
+		Sobrenome: <br>
+		<input type="text" name="sobrenome">
+		<br><br>
+		Senha:<br>
+		<input type="password" name="senha">
+		<br>
+		<input type="radio" name="genero" value="masculino" checked> Male <br>
+		<input type="radio" name="genero" value="feminino"> Female <br>
+		<input type="radio" name="genero" value="outro"> Other <br>
+
+		<input type="checkbox" name="veiculo" value="bicicleta"> Bicicleta <br>
+		<input type="check" name="veiculo2" value="carro"> Carro <br>
+
+		Niver: <br>
+		<input type="date" name="aniversario"><br>
+
+		<br>
+		Faixa de preço: <br>
+		<input type="range" name="pontos" min="0" max="100">
+		<br>
+		<select name="carros" size="3" 
+		style="width: 50%;">
+			<option value="volvo'">Volvo</option>
+			<option value="gol">Gol 1000</option>
+			<option value="fusca">Fusca</option>
+			<option value="fiat">Fiat</option>
+		</select>
+		<br>
+		<br>
+		<br>
+		<input type="submit" value="Enviar">
+	</form>
+
+</body>
+</html>

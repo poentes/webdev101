@@ -1,0 +1,8 @@
+
+#audio{
+	display: block;
+}
+
+#audio, #video{
+	text-align: center;
+}
