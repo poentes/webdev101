@@ -1,0 +1,19 @@
+
+div{
+	background-color: gray;
+	width: 80%;
+	height: 500px;
+	margin: 0px auto;/*Centralizando*/
+	padding: 10px;
+}
+
+p {
+	text-align: center;
+}
+
+.branco {
+	color: white;
+	font-weight: bold;
+	font-size: 35px;
+	font-family: serif;
+}
