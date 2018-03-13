@@ -1,0 +1,16 @@
+
+.dotted{
+	border-style: dotted;
+}
+
+.groove{
+	border-style: groove;
+}
+
+.borda {
+	border: 5px solid black;
+}
+
+.blue {
+	border: 2px solid blue;
+}

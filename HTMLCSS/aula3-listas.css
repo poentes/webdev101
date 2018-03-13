@@ -1,0 +1,16 @@
+
+ul.bebidas{
+	list-style-type: circle;
+}
+
+ul.comidas{
+	list-style-type: square;
+}
+
+ol.ru {
+	list-style-type: upper-roman;
+}
+
+ol.eden{
+	list-style-type: lower-alpha;
+}
