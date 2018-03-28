@@ -4,14 +4,10 @@ function load()
 {
 	var btnModalSalvar = document.getElementById("btnModalSalvar");
 
+
 	btnModalSalvar.addEventListener("click", function(){
 		//console.log("Arquivo Salvo com Sucesso");
 		var corpoTabela = document.getElementById("corpoTabela");
-
-
-//  "<td><button class=\"btn btn-warning\">Editar</button>";
-		// corpoTabela.innerHTML += "<button type=\"button\" name=\"btnExcluir\" data-toggle=\"modal\" data-target=\"#excluir\" class=\"btn btn-danger\">Exluir</button></td>";
-		// corpoTabela.innerHTML += "</tr>";
 
 		var inputNome = document.getElementById("inputNome").value;
 		var inputIdade = document.getElementById("inputIdade").value;
@@ -24,21 +20,36 @@ function load()
 		tdIdade.innerHTML = inputIdade;
 		var tdCurso = document.createElement("td");
 		tdCurso.innerHTML = inputCurso;
-		var tdBotoes = document.createElement("td");
+		var tdEditar = document.createElement("td");
+		var tdExcluir = document.createElement("td");
+
 		var botaoEditar = document.createElement("button");
-		$('#botaoEditar').addClass('dropdown-toggle');
- 		$('#botaoEditar').attr('data-toggle','modal');
- 		$('#botaoEditar').addClass('dropdown-target');
- 		$('#botaoEditar').attr('data-target','#editar');
- 		$('#botaoEditar').addClass('btn');
- 		$('#botaoEditar').addClass('btn-warning');
- 		botaoEditar.innerHTML = "Editar";
- 		tdBotoes.appendChild(botaoEditar);
+		botaoEditar.setAttribute("data-toggle", "modal");
+		botaoEditar.setAttribute("data-target", "#editar");
+		botaoEditar.className += " btn btn-warning ";
+		botaoEditar.innerHTML = "Editar";
+
+		var botaoExcluir = document.createElement("button");
+		botaoExcluir.setAttribute("data-toggle", "modal");
+		botaoExcluir.setAttribute("data-target", "#excluir");
+		botaoExcluir.className += " btn btn-danger";
+		botaoExcluir.innerHTML = "Excluir";		
+
+ 		tdEditar.appendChild(botaoEditar);
+ 		tdExcluir.appendChild(botaoExcluir);
 		tr.appendChild(tdNome);
 		tr.appendChild(tdIdade);
 		tr.appendChild(tdCurso); 
-		tr.appendChild(tdBotoes);
+		tr.appendChild(tdEditar);
+		tr.appendChild(tdExcluir);
 		corpoTabela.appendChild(tr);
+
+		$("#tabela").find('tbody')
+			.append("<td>"+inputNome+"</td>")
+			.append("<td>"+inputIdade+"</td>")
+			.append("<td>"+inputCurso+"</td>")
+		    .append("<td><button data-toggle='modal' data-target='#editar' class='btn btn-warning botoes'>Editar</button></td>")
+		    .append("<td><button data-toggle='modal' data-target='#excluir' class='btn btn-danger'>Excluir</button></td>");
 	});
 }
 
