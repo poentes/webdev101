@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Aula 07
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<style type="text/css">
+		.espaco{
+			margin-top: 5%;
+		}
+
+		.vermelho{
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<!-- Navbar do meu site -->
+	<nav id="banner" class="navbar navbar-dark bg-dark justify-content-between">
+	  <a class="navbar-brand" href="http://ivopontes.com.br">IvoPontes.com.br</a>
+	  <form class="form-inline">
+	    <input class="form-control mr-sm-2" type="search" placeholder="Digite aqui..." aria-label="Search">
+	    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar...</button>
+	  </form>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="cold-md-10 offset-md-1">
+				<div class="modal fade" id="editar" role="dialog">
+					<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+										<h1 class="danger">Editar #</h1>
+								</div>
+								<div class="modal-body">
+										<form>
+											<div class="form-group">
+													<label for="nome">Nome</label>
+													<input id="inputNome" class="form-control" type="text" name="nome" placeholder="Digite seu nome aqui...">
+											</div>
+											<div class="form-group">
+													<label for="idade">Idade</label>
+													<input id="inputIdade" class="form-control" type="text" name="idade" placeholder="Digite sua idade aqui...">
+											</div>
+											<div class="form-group">
+													<label for="curso">Curso</label>
+													<input id="inputCurso" class="form-control" type="text" name="curso" placeholder="Digite seu curso aqui...">
+											</div>
+										</form>
+								</div>
+								<div class="modal-footer">
+										<button type="button" class="btn btn-primary">Cancelar</button>
+										<button type="button" class="btn btn-success" id="btnModalSalvar">Salvar</button>
+								</div>
+							</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="cold-md-10 offset-md-1">
+				<div class="modal fade" id="excluir" role="dialog">
+					<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+										<h1 class="danger">Excluir</h1>
+								</div>
+								<div class="modal-body">
+										<h1 class="vermelho">VOCÊ TEM CERTEZA QUE QUER EXCLUIR?</h1>
+								</div>
+								<div class="modal-footer">
+										<button type="button" class="btn btn-primary">Cancelar</button>
+										<button type="button" class="btn btn-danger">Excluir!!!</button>
+								</div>
+							</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container espaco">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="table-responsive table-boreded table-hover table-condensed">
+					<table class="table" id="tabela">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Idade</th>
+								<th>Curso</th>
+								<th> </th>
+							</tr>
+						</thead>
+						<tbody id="corpoTabela">
+							<tr>
+								<td>Ana</td>
+								<td>22</td>
+								<td>Direito</td>
+								<td><button type="button" name="btnEditar" data-toggle="modal" data-target="#editar" class="btn btn-warning">Editar</button>
+								<button type="button" name="btnExcluir" data-toggle="modal" data-target="#excluir" class="btn btn-danger">Exluir</button></td>
+							</tr>
+							<tr>
+								<td>Beatriz</td>
+								<td>18</td>
+								<td>Nutrição</td>
+								<td><button type="button" name="btnEditar" data-toggle="modal" data-target="#editar" class="btn btn-warning">Editar</button>
+								<button type="button" name="btnExcluir" data-toggle="modal" data-target="#excluir" class="btn btn-danger">Exluir</button></td>
+							</tr>
+							<tr>
+								<td>Beatriz</td>
+								<td>18</td>
+								<td>Nutrição</td>
+								<td><button type="button" name="btnEditar" data-toggle="modal" data-target="#editar" class="btn btn-warning">Editar</button>
+								<button type="button" name="btnExcluir" data-toggle="modal" data-target="#excluir" class="btn btn-danger">Exluir</button></td>
+							</tr>
+							<tr>
+								<td>Beatriz</td>
+								<td>18</td>
+								<td>Nutrição</td>
+								<td><button type="button" name="btnEditar" data-toggle="modal" data-target="#editar" class="btn btn-warning">Editar</button>
+								<button type="button" name="btnExcluir" data-toggle="modal" data-target="#excluir" class="btn btn-danger">Exluir</button></td>
+							</tr>
+							<tr>
+								<td>Beatriz</td>
+								<td>18</td>
+								<td>Nutrição</td>
+								<td><button type="button" name="btnEditar" data-toggle="modal" data-target="#editar" class="btn btn-warning">Editar</button>
+								<button type="button" name="btnExcluir" data-toggle="modal" data-target="#excluir" class="btn btn-danger">Exluir</button></td>
+							</tr>
+							<tr>
+								<td>Beatriz</td>
+								<td>18</td>
+								<td>Nutrição</td>
+								<td><button type="button" name="btnEditar" data-toggle="modal" data-target="#editar" class="btn btn-warning">Editar</button>
+								<button type="button" name="btnExcluir" data-toggle="modal" data-target="#excluir" class="btn btn-danger">Exluir</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="./js/popper.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./aula07.js"></script>
+</body>
+</html>
